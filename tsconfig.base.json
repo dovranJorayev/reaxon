@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["ES2020"],
+    "strict": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "useDefineForClassFields": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "types": ["node", "vitest/globals"]
+  }
+}

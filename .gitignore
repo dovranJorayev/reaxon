@@ -1,0 +1,17 @@
+# dependencies / build output
+node_modules/
+dist/
+coverage/
+*.tgz
+*.tsbuildinfo
+
+# local secrets and environment: never committed
+.env
+.env.*
+!.env.example
+.npmrc.local
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.idea/

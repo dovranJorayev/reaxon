@@ -1,0 +1,25 @@
+packages:
+  - packages/*
+
+# ---------------------------------------------------------------------------
+# Supply-chain hardening. See docs/reports/2026-09-14-npm-supply-chain-threat-model.md
+# ---------------------------------------------------------------------------
+
+# Never resolve a version published less than 7 days ago. Every 2025-2026 worm
+# wave (Shai-Hulud, ChainDrop, Mini Shai-Hulud, axios, keyv) was detected and
+# removed from the registry within hours; a cooldown makes the window irrelevant.
+minimumReleaseAge: 10080
+minimumReleaseAgeExclude: []
+
+# Refuse a version whose publish attestation is weaker than the version already
+# in the lockfile (e.g. provenance-signed -> token-published). Catches account
+# takeovers that publish from outside the trusted CI pipeline.
+trustPolicy: no-downgrade
+
+# Lifecycle scripts of dependencies never run unless explicitly listed. Every
+# worm in the threat model executes via `preinstall`/`postinstall`.
+strictDepBuilds: true
+allowBuilds: {}
+
+# Dependencies of dependencies must come from the registry: no git/tarball URLs.
+blockExoticSubdeps: true

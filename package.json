@@ -1,0 +1,37 @@
+{
+  "name": "reaxon",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Reactive bindings for the JavaScript ecosystem, published under the @reaxon scope",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dovranJorayev/reaxon.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "pnpm@12.4.1",
+  "engines": {
+    "node": ">=22.14.0",
+    "pnpm": ">=12"
+  },
+  "scripts": {
+    "build": "pnpm -r run build",
+    "test": "pnpm -r run test",
+    "typecheck": "pnpm -r run typecheck",
+    "publint": "pnpm -r exec publint --strict",
+    "verify": "pnpm typecheck && pnpm test && pnpm build && pnpm publint",
+    "changeset": "changeset",
+    "version-packages": "changeset version && pnpm install --lockfile-only",
+    "release": "pnpm build && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "3.0.2",
+    "@microsoft/api-extractor": "7.59.0",
+    "@types/node": "26.4.1",
+    "publint": "0.3.24",
+    "typescript": "6.0.3",
+    "vite": "8.2.2",
+    "vite-plugin-dts": "5.1.0",
+    "vitest": "5.0.0"
+  }
+}
