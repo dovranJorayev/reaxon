@@ -1,0 +1,9 @@
+# Every change needs an owner review; workflow and dependency policy files are
+# the highest-value targets for a supply-chain attacker and are called out
+# explicitly so branch protection can require owner approval for them.
+*                     @dovranJorayev
+/.github/             @dovranJorayev
+/pnpm-workspace.yaml  @dovranJorayev
+/pnpm-lock.yaml       @dovranJorayev
+/.npmrc               @dovranJorayev
+/package.json         @dovranJorayev
