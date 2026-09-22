@@ -12,12 +12,6 @@ function invariant(cond: boolean, message = 'Illegal state') {
   if (!cond) throw new Error('[resource] ' + message);
 }
 
-export interface IResource<T> {
-  current(): T;
-  dispose(): void;
-  isAlive(): boolean;
-}
-
 export const NO_SUBSCRIPTION_WARNING =
   '[resource] Called `get` of a subscribingObservable outside a reaction. Current value will be returned but no new subscription has started';
 

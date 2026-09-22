@@ -2,11 +2,10 @@ import {
   attach,
   createEvent,
   createStore,
-  is,
   sample,
   scopeBind,
   type Event,
-  type Store,
+  type Store
 } from "effector";
 import {
   createFormControl,

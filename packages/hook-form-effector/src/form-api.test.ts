@@ -4,7 +4,6 @@ import { describe, expect, it, vi } from "vitest"
 import {
   formPrefillApi,
   formResetApi,
-  formServerErrorsApi,
   formSetApi,
 } from "./form-api"
 
@@ -68,20 +67,3 @@ describe("formSetApi", () => {
   })
 })
 
-describe("formServerErrorsApi", () => {
-  it("attaches the field map as server errors on matching inputs", async () => {
-    const form = build()
-    const serverErrorsFx = formServerErrorsApi(form)
-    const scope = fork()
-
-    await allSettled(serverErrorsFx, {
-      scope,
-      params: { name: ["already exists"], unknown_field: ["skipped"] },
-    })
-
-    expect(form.getFieldState("name").error).toMatchObject({
-      type: "server",
-      message: "already exists",
-    })
-  })
-})

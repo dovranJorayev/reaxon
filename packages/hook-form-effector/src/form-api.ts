@@ -86,14 +86,14 @@ export type FormFieldError<Values extends FieldValues> = {
 
 
 /**
- * setServerErrors bound to the form: attach a server's 422 field map as
- * type:"server" input errors (see server-errors.ts for the semantics).
+ * `form.setError` bound to the form: apply a list of field errors, e.g. a
+ * server's 422 response mapped to `type: "server"` input errors.
  */
 export const formSetErrorApi = <Values extends FieldValues>(
   form: FormControl<Values> | Store<FormControl<Values>>,
 ) =>
   attach({
-    name: "formServerErrorsFx",
+    name: "formSetErrorFx",
     source: storify(form),
     effect: (form, fields: FormFieldError<Values>[]) => {
       for (const fieldError of fields) {
