@@ -45,12 +45,11 @@
   },
   "peerDependencies": {
     "effector": "^23",
-    "react-hook-form": "^7.79.0"
+    "react-hook-form": "^7.55.0"
   },
   "devDependencies": {
     "@types/react": "19.2.18",
     "effector": "23.4.4",
-    "effector-action": "1.2.2",
     "react": "19.2.8",
     "react-hook-form": "7.79.0"
   }

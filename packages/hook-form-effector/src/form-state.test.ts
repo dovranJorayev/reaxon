@@ -1,5 +1,11 @@
-import { allSettled, attach, createEvent, createStore, fork } from "effector"
-import { createAction } from "effector-action"
+import {
+  allSettled,
+  attach,
+  createEvent,
+  createStore,
+  fork,
+  sample,
+} from "effector"
 import { createFormControl } from "react-hook-form"
 import { describe, expect, it, vi } from "vitest"
 import { formState } from "./form-state"
@@ -47,14 +53,8 @@ describe("formState", () => {
           form.reset({ name: "seeded" })
         },
       })
-      createAction({
-        clock: load,
-        target: { opened, seedFx },
-        fn: (target) => {
-          target.opened()
-          target.seedFx()
-        },
-      })
+      // Targets launch in array order: `opened` first, then `seedFx`.
+      sample({ clock: load, target: [opened, seedFx] })
       return { load, $mirror }
     }
 
