@@ -4,7 +4,7 @@ import {
   QueryObserver,
   QueryObserverOptions,
   QueryObserverResult,
-} from '@tanstack/react-query';
+} from '@tanstack/query-core';
 import { IReactionDisposer, autorun, observable, runInAction } from 'mobx';
 import { fromResource } from 'mobx-utils';
 import { describe, expect, vi } from 'vitest';

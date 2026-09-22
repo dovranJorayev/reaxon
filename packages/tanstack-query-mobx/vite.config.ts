@@ -15,11 +15,11 @@ export default defineConfig({
       fileName: (format) => `index.${format === 'es' ? 'js' : 'cjs'}`,
     },
     rollupOptions: {
-      external: ['mobx', '@tanstack/react-query', 'mobx-utils'],
+      external: ['mobx', '@tanstack/query-core', 'mobx-utils'],
       output: {
         globals: {
           mobx: 'mobx',
-          '@tanstack/react-query': 'TanstackReactQuery',
+          '@tanstack/query-core': 'TanstackQueryCore',
           'mobx-utils': 'mobxUtils',
         },
       },

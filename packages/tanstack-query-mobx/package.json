@@ -2,7 +2,7 @@
   "name": "@reaxon/tanstack-query-mobx",
   "version": "0.1.0",
   "description": "MobX reactive wrappers for TanStack Query observers",
-  "keywords": ["mobx", "tanstack-query", "react-query", "reactive", "resource"],
+  "keywords": ["mobx", "tanstack-query", "query-core", "react-query", "reactive", "resource"],
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -44,22 +44,12 @@
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
-    "@tanstack/react-query": "^4",
-    "mobx": ">=6",
-    "mobx-utils": ">=6"
-  },
-  "peerDependenciesMeta": {
-    "mobx-utils": {
-      "optional": true
-    }
+    "@tanstack/query-core": "^4",
+    "mobx": "^6"
   },
   "devDependencies": {
-    "@tanstack/react-query": "4.44.0",
-    "@types/react": "19.2.18",
-    "@types/react-dom": "19.2.7",
+    "@tanstack/query-core": "4.44.0",
     "mobx": "6.16.1",
-    "mobx-utils": "6.1.1",
-    "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "mobx-utils": "6.1.1"
   }
 }

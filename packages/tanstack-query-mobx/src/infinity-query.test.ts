@@ -1,4 +1,4 @@
-import { QueryClient } from '@tanstack/react-query';
+import { QueryClient } from '@tanstack/query-core';
 import { configure, when } from 'mobx';
 import { describe, vi } from 'vitest';
 import { createInfinityQuery } from './infinity-query';

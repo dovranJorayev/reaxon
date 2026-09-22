@@ -6,7 +6,7 @@ a reaction subscribes the observer, and disposing the last reaction
 unsubscribes it.
 
 ```sh
-pnpm add @reaxon/tanstack-query-mobx @tanstack/react-query@^4 mobx
+pnpm add @reaxon/tanstack-query-mobx @tanstack/query-core@^4 mobx
 ```
 
 ## API
@@ -20,7 +20,7 @@ pnpm add @reaxon/tanstack-query-mobx @tanstack/react-query@^4 mobx
 - `resource(fetcher)` — a standalone lazy, reactive async resource.
 
 ```ts
-import { QueryClient } from '@tanstack/react-query';
+import { QueryClient } from '@tanstack/query-core';
 import { autorun } from 'mobx';
 import { createQuery } from '@reaxon/tanstack-query-mobx';
 
@@ -41,9 +41,8 @@ autorun(() => {
 
 ## Peer dependencies
 
-- `@tanstack/react-query` `^4`
-- `mobx` `>=6`
-- `mobx-utils` `>=6` (optional, only for `IResource` typing)
+- `@tanstack/query-core` `^4` (already installed if you use `@tanstack/react-query`, `@tanstack/vue-query`, etc.)
+- `mobx` `^6`
 
 ## License
 

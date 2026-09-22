@@ -6,7 +6,7 @@ import {
   QueryKey,
   QueryObserver,
   QueryObserverResult,
-} from '@tanstack/react-query';
+} from '@tanstack/query-core';
 import { reaction } from 'mobx';
 import { IResource, resource } from './resource';
 

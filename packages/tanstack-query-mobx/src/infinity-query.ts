@@ -5,7 +5,7 @@ import {
   QueryClient,
   QueryKey,
   notifyManager,
-} from '@tanstack/react-query';
+} from '@tanstack/query-core';
 import { queryResource } from './query-resource';
 import { IResource } from './resource';
 import { action, computed, makeObservable } from 'mobx';

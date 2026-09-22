@@ -5,9 +5,9 @@ import {
   QueryObserverOptions,
   QueryObserverResult,
   notifyManager,
-} from '@tanstack/react-query';
+} from '@tanstack/query-core';
 import { action, computed, makeObservable } from 'mobx';
-import { IResource } from 'mobx-utils';
+import { IResource } from './resource';
 import { queryResource } from './query-resource';
 
 export const createQuery = <

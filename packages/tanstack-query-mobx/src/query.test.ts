@@ -1,4 +1,4 @@
-import { QueryClient } from '@tanstack/react-query';
+import { QueryClient } from '@tanstack/query-core';
 import { configure, when } from 'mobx';
 import { afterAll, beforeAll, describe, expect, vi } from 'vitest';
 import { createQuery } from './query';
