@@ -39,21 +39,52 @@ scope.getState($form).values.name; // ''
   pristine values because RHF's `reset(values)` replaces `defaultValues`.
 - `formPrefillApi(form)` — `form.reset(payload)`, e.g. an edit prefill.
 - `formSetApi(form)` — `form.setValue(name, value, options)`.
-- `formServerErrorsApi(form)` — attach a `{ field: string[] }` server error
-  map as `type: "server"` field errors.
+- `formSetErrorApi(form)` — `form.setError(name, error, options)` for each
+  entry of a `FormFieldError[]` payload, e.g. to attach a server's field
+  errors after a failed submit.
 
 Each accepts either a form control or a `Store` holding one.
 
-### `setServerErrors(form, fields)`
+## Effector plugin setup (SSR / `fork`)
 
-The plain function behind `formServerErrorsApi`. Returns how many fields were
-attached; `0` means nothing matched and the caller should fall back to a
-generic message.
+Every export of this package is a factory: it creates stores, events and
+effects on each call. For those units to get stable SIDs, which `fork` and
+`serialize` need for SSR and for hydration, list the package in the
+`factories` option of the Effector compiler plugin. Client-only apps that
+never serialize a scope can skip this.
+
+Babel (`effector/babel-plugin`):
+
+```json
+{
+  "plugins": [
+    ["effector/babel-plugin", { "factories": ["@reaxon/hook-form-effector"] }]
+  ]
+}
+```
+
+SWC (`@effector/swc-plugin`), e.g. in `.swcrc` or Next.js `experimental.swcPlugins`:
+
+```json
+["@effector/swc-plugin", { "factories": ["@reaxon/hook-form-effector"] }]
+```
+
+Vite with `@vitejs/plugin-react`:
+
+```ts
+react({
+  babel: {
+    plugins: [
+      ["effector/babel-plugin", { factories: ["@reaxon/hook-form-effector"] }],
+    ],
+  },
+});
+```
 
 ## Peer dependencies
 
 - `effector` `^23`
-- `react-hook-form` `^7.79`
+- `react-hook-form` `^7.55` (`createFormControl` and `subscribe` landed in 7.55.0)
 
 ## License
 
