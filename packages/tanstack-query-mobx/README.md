@@ -41,8 +41,8 @@ autorun(() => {
 
 ## Peer dependencies
 
-- `@tanstack/query-core` `^4` (already installed if you use `@tanstack/react-query`, `@tanstack/vue-query`, etc.)
-- `mobx` `^6`
+- `@tanstack/query-core` `^4.13` (already installed if you use `@tanstack/react-query`, `@tanstack/vue-query`, etc.; 4.13 added `failureReason` to observer results)
+- `mobx` `^6.10` (6.10 added the `signal` option to `reaction`)
 
 ## License
 

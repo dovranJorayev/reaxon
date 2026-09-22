@@ -45,7 +45,7 @@
   },
   "peerDependencies": {
     "effector": "^23",
-    "react-hook-form": "^7.55.0"
+    "react-hook-form": "^7.72.0"
   },
   "devDependencies": {
     "@types/react": "19.2.18",

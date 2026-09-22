@@ -18,10 +18,10 @@ outside the declared range.
 
 | Package | Peer | Supported |
 | --- | --- | --- |
-| `@reaxon/tanstack-query-mobx` | `@tanstack/query-core` | `^4` |
-| `@reaxon/tanstack-query-mobx` | `mobx` | `^6` |
+| `@reaxon/tanstack-query-mobx` | `@tanstack/query-core` | `^4.13.0` |
+| `@reaxon/tanstack-query-mobx` | `mobx` | `^6.10.0` |
 | `@reaxon/hook-form-effector` | `effector` | `^23` |
-| `@reaxon/hook-form-effector` | `react-hook-form` | `^7.55.0` |
+| `@reaxon/hook-form-effector` | `react-hook-form` | `^7.72.0` |
 
 ## Development
 

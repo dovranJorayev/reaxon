@@ -84,7 +84,7 @@ react({
 ## Peer dependencies
 
 - `effector` `^23`
-- `react-hook-form` `^7.55` (`createFormControl` and `subscribe` landed in 7.55.0)
+- `react-hook-form` `^7.72` (`createFormControl` exists since 7.55, but the `form.*` error names and the `isSubmitted` subscription flag this package relies on typecheck from 7.72.0)
 
 ## License
 

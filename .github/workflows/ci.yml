@@ -72,13 +72,13 @@ jobs:
           # so a widened range that was never run here fails fast.
           - package: '@reaxon/tanstack-query-mobx'
             edge: oldest
-            command: add -D @tanstack/query-core@4.0.0 mobx@6.0.0
+            command: add -D @tanstack/query-core@4.13.0 mobx@6.10.0
           - package: '@reaxon/tanstack-query-mobx'
             edge: newest
             command: update @tanstack/query-core@4 mobx@6
           - package: '@reaxon/hook-form-effector'
             edge: oldest
-            command: add -D effector@23.0.0 react-hook-form@7.55.0
+            command: add -D effector@23.0.0 react-hook-form@7.72.0
           - package: '@reaxon/hook-form-effector'
             edge: newest
             command: update effector@23 react-hook-form@7

@@ -44,8 +44,8 @@
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
-    "@tanstack/query-core": "^4",
-    "mobx": "^6"
+    "@tanstack/query-core": "^4.13.0",
+    "mobx": "^6.10.0"
   },
   "devDependencies": {
     "@tanstack/query-core": "4.44.0",
