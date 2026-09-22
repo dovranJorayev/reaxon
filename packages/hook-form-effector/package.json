@@ -1,6 +1,6 @@
 {
   "name": "@reaxon/hook-form-effector",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Effector bindings for react-hook-form: mirror form state into stores and drive the form control with effects",
   "keywords": ["effector", "react-hook-form", "forms", "state-management"],
   "license": "MIT",
