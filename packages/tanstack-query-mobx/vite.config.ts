@@ -8,6 +8,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   build: {
+    // Same floor as tsconfig.base.json; Node 18+ and evergreen browsers.
+    target: 'es2020',
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'ReaxonTanstackQueryMobx',
@@ -31,7 +33,7 @@ export default defineConfig({
     dts({
       include: ['src'],
       exclude: ['src/**/*.test.ts', 'src/tools.ts'],
-      outDir: 'dist',
+      outDirs: ['dist'],
       bundleTypes: true,
       // The bundled declaration file has no runtime imports, so the same text
       // is valid for CommonJS consumers under `exports.require.types`.

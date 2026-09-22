@@ -8,6 +8,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   build: {
+    // Same floor as tsconfig.base.json; Node 18+ and evergreen browsers.
+    target: 'es2020',
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'ReaxonHookFormEffector',
@@ -30,7 +32,7 @@ export default defineConfig({
     dts({
       include: ['src'],
       exclude: ['src/**/*.test.ts'],
-      outDir: 'dist',
+      outDirs: ['dist'],
       bundleTypes: true,
       afterBuild: () =>
         copyFile(
