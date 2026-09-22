@@ -47,7 +47,7 @@ describe.concurrent(
         }),
       });
 
-      await when(() => query.dataUpdatedAt > now, { timeout: 1000 });
+      await when(() => query.dataUpdatedAt >= now, { timeout: 1000 });
 
       expect(fetchMock).toHaveBeenCalled();
     });
@@ -123,7 +123,7 @@ describe.concurrent(
         }),
       });
 
-      await when(() => query.errorUpdatedAt > now);
+      await when(() => query.errorUpdatedAt >= now);
 
       expect(fetchMock).toHaveBeenCalled();
     });

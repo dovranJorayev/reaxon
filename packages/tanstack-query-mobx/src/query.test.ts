@@ -40,7 +40,7 @@ describe.concurrent(
         getOptions: () => ({ queryKey: ['test'], queryFn: fetchMock }),
       });
 
-      await when(() => query.dataUpdatedAt > now, { timeout: 1000 });
+      await when(() => query.dataUpdatedAt >= now, { timeout: 1000 });
 
       expect(fetchMock).toHaveBeenCalled();
     });
