@@ -5,8 +5,8 @@ Reactive bindings for the JavaScript ecosystem, published under the
 
 | Package | Description |
 | --- | --- |
-| [`@reaxon/mobx-tanstack-query`](packages/mobx-tanstack-query) | MobX reactive wrappers for TanStack Query observers |
-| [`@reaxon/effector-hook-form`](packages/effector-hook-form) | Effector bindings for react-hook-form |
+| [`@reaxon/tanstack-query-mobx`](packages/tanstack-query-mobx) | MobX reactive wrappers for TanStack Query observers |
+| [`@reaxon/hook-form-effector`](packages/hook-form-effector) | Effector bindings for react-hook-form |
 
 ## Development
 

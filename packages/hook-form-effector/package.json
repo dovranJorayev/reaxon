@@ -1,15 +1,15 @@
 {
-  "name": "@reaxon/mobx-tanstack-query",
+  "name": "@reaxon/hook-form-effector",
   "version": "0.1.0",
-  "description": "MobX reactive wrappers for TanStack Query observers",
-  "keywords": ["mobx", "tanstack-query", "react-query", "reactive", "resource"],
+  "description": "Effector bindings for react-hook-form: mirror form state into stores and drive the form control with effects",
+  "keywords": ["effector", "react-hook-form", "forms", "state-management"],
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dovranJorayev/reaxon.git",
-    "directory": "packages/mobx-tanstack-query"
+    "directory": "packages/hook-form-effector"
   },
-  "homepage": "https://github.com/dovranJorayev/reaxon/tree/main/packages/mobx-tanstack-query#readme",
+  "homepage": "https://github.com/dovranJorayev/reaxon/tree/main/packages/hook-form-effector#readme",
   "bugs": "https://github.com/dovranJorayev/reaxon/issues",
   "type": "module",
   "sideEffects": false,
@@ -44,22 +44,14 @@
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
-    "@tanstack/react-query": "^4",
-    "mobx": ">=6",
-    "mobx-utils": ">=6"
-  },
-  "peerDependenciesMeta": {
-    "mobx-utils": {
-      "optional": true
-    }
+    "effector": "^23",
+    "react-hook-form": "^7.79.0"
   },
   "devDependencies": {
-    "@tanstack/react-query": "4.44.0",
     "@types/react": "19.2.18",
-    "@types/react-dom": "19.2.7",
-    "mobx": "6.16.1",
-    "mobx-utils": "6.1.1",
+    "effector": "23.4.4",
+    "effector-action": "1.2.2",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-hook-form": "7.79.0"
   }
 }

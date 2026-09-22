@@ -36,8 +36,8 @@ pnpm -r publish --access public --no-git-checks
 
 # 4. confirm, then let the session expire; nothing is written to ~/.npmrc that
 #    outlives it
-npm view @reaxon/effector-hook-form version
-npm view @reaxon/mobx-tanstack-query version
+npm view @reaxon/hook-form-effector version
+npm view @reaxon/tanstack-query-mobx version
 ```
 
 If `npm login` is impossible on the machine, create a granular access token
@@ -104,7 +104,7 @@ Constraints to remember:
 ### 2.4 Verifying a release
 
 ```sh
-npm view @reaxon/effector-hook-form --json | jq .dist.attestations
+npm view @reaxon/hook-form-effector --json | jq .dist.attestations
 npm audit signatures          # in a consumer project
 ```
 

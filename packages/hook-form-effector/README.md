@@ -1,4 +1,4 @@
-# @reaxon/effector-hook-form
+# @reaxon/hook-form-effector
 
 [Effector](https://effector.dev) bindings for
 [react-hook-form](https://react-hook-form.com)'s headless `createFormControl`.
@@ -7,7 +7,7 @@ lets Effector models read derived form state and drive the control with
 effects, scope-safe.
 
 ```sh
-pnpm add @reaxon/effector-hook-form effector react-hook-form
+pnpm add @reaxon/hook-form-effector effector react-hook-form
 ```
 
 ## API
@@ -22,7 +22,7 @@ the same wave as `setup` is never missed.
 ```ts
 import { createEvent, fork, allSettled } from 'effector';
 import { createFormControl } from 'react-hook-form';
-import { formState } from '@reaxon/effector-hook-form';
+import { formState } from '@reaxon/hook-form-effector';
 
 const form = createFormControl<{ name: string }>({ defaultValues: { name: '' } });
 const opened = createEvent();

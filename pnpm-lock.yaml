@@ -191,7 +191,7 @@ importers:
         specifier: 5.0.0
         version: 5.0.0(@types/node@26.4.1)(vite@8.2.2(@types/node@26.4.1)(yaml@2.9.0))
 
-  packages/effector-hook-form:
+  packages/hook-form-effector:
     devDependencies:
       '@types/react':
         specifier: 19.2.18
@@ -209,7 +209,7 @@ importers:
         specifier: 7.79.0
         version: 7.79.0(react@19.2.8)
 
-  packages/mobx-tanstack-query:
+  packages/tanstack-query-mobx:
     devDependencies:
       '@tanstack/react-query':
         specifier: 4.44.0

@@ -1,4 +1,4 @@
-# @reaxon/mobx-tanstack-query
+# @reaxon/tanstack-query-mobx
 
 MobX reactive wrappers for [TanStack Query](https://tanstack.com/query) v4
 observers. Read query results as MobX computed values: reading a field inside
@@ -6,7 +6,7 @@ a reaction subscribes the observer, and disposing the last reaction
 unsubscribes it.
 
 ```sh
-pnpm add @reaxon/mobx-tanstack-query @tanstack/react-query@^4 mobx
+pnpm add @reaxon/tanstack-query-mobx @tanstack/react-query@^4 mobx
 ```
 
 ## API
@@ -22,7 +22,7 @@ pnpm add @reaxon/mobx-tanstack-query @tanstack/react-query@^4 mobx
 ```ts
 import { QueryClient } from '@tanstack/react-query';
 import { autorun } from 'mobx';
-import { createQuery } from '@reaxon/mobx-tanstack-query';
+import { createQuery } from '@reaxon/tanstack-query-mobx';
 
 const queryClient = new QueryClient();
 
